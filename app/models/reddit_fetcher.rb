@@ -18,4 +18,24 @@ class RedditFetcher
 
   end
 
+  def r_programming
+    response = @reddit_connection.get do |req|
+      req.url "/r/programming.json"
+      req.headers['Content-Type'] = 'application/json'
+    end
+
+    JSON.parse(response.body)
+
+  end
+
+  def r_kittens
+    response = @reddit_connection.get do |req|
+      req.url "/r/kittens.json"
+      req.headers['Content-Type'] = 'application/json'
+    end
+
+    JSON.parse(response.body)
+
+  end
+
 end

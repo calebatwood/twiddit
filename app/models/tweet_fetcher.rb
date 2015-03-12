@@ -16,4 +16,5 @@ class TweetFetcher
     @client.update(@twitter_handle)
   end
 
+
 end
