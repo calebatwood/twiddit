@@ -19,8 +19,3 @@ class RedditFetcher
   end
 
 end
-
-
-
-
-end
