@@ -2,8 +2,8 @@
 <div class="row">
   <div class="col-md-4">
     <h2>Tweet the top of r/funny</h2>
-    <h4><%= @reddit.r_funny["data"]["children"][0]["data"]["title"] %></h4>
-    <h4><%= image_tag(@reddit.r_funny["data"]["children"][0]["data"]["url"], width: "300") %></h4>
+    <h4><%= @funny %></h4>
+    <h4><%= image_tag(@url_f, width: "300") %></h4>
     <%= form_tag root_path do %>
     <%= hidden_field_tag :new_tweet, @funny + " " + @url_f %>
     <%= submit_tag "Tweet it!", class: "btn btn-warning btn-lrg" %>
@@ -11,19 +11,19 @@
   </div>
   <div class="col-md-4">
     <h2>Tweet the top of r/programming</h2>
-    <h4><%= @reddit.r_programming["data"]["children"][0]["data"]["title"] %></h4>
-    <h4><%= @reddit.r_programming["data"]["children"][0]["data"]["url"] %></h4>
+    <h4><%= @programming %></h4>
+    <h4><%= @url_p %></h4>
     <%= form_tag root_path do %>
     <%= hidden_field_tag :new_tweet, @programming + " " + @url_p %>
     <%= submit_tag "Tweet it!", class: "btn btn-warning btn-lrg" %>
     <% end %>
   </div>
   <div class="col-md-4">
-    <h2>Tweet the top of r/kittens</h2>
-    <h4><%= @reddit.r_kittens["data"]["children"][0]["data"]["title"] %></h4>
-    <h4><%= image_tag(@reddit.r_kittens["data"]["children"][0]["data"]["url"], width: "300") %></h4>
+    <h2>Tweet the top of r/cats</h2>
+    <h4><%= @cats %></h4>
+    <h4><%= image_tag(@url_c, width: "300") %></h4>
     <%= form_tag root_path do %>
-    <%= hidden_field_tag :new_tweet, @kittens + " " + @url_k %>
+    <%= hidden_field_tag :new_tweet, @cats + " " + @url_c %>
     <%= submit_tag "Tweet it!", class: "btn btn-warning btn-lrg" %>
     <% end %>
   </div>
